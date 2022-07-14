@@ -1,0 +1,185 @@
+:root {
+  --navHeight: 64px;
+}
+
+html {
+  font-family: Lato;
+}
+
+body {
+  height: 100vh;
+  padding-top: var(--navHeight);
+  background-color: #f2f2f2;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  height: var(--navHeight);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid lightgray;
+  background-color: white;
+  z-index: 999;
+}
+
+.logoContainer {
+  display: flex;
+  position: relative;
+  height: var(--navHeight);
+  flex: 0.75;
+}
+
+.logo {
+  position: absolute;
+  display: inline-block;
+  top: calc(var(--navHeight) / 5);
+  right: 0;
+  height: auto;
+  width: auto;
+  max-height: 42px;
+  max-width: 195px;
+  cursor: pointer;
+}
+
+.linksContainer {
+  flex: 2;
+}
+
+.links {
+  height: 100%;
+  padding-left: 125px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.navButton {
+  background-color: white;
+  border: none;
+  height: 100%;
+  width: 164px;
+  cursor: pointer;
+  transition: background-color 0.15s linear;
+  font-family: Lato light;
+  text-align: center;
+  line-height: 60px;
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.navButton:hover {
+  background-color: #f2f2f2;
+}
+
+.profileContainer {
+  flex: 0.75;
+  position: relative;
+}
+
+.welcome {
+  display: inline-block;
+  position: absolute;
+  font-family: Lato light;
+  font-style: italic;
+  font-size: 18px;
+  padding-left: 50px;
+  top: 35%;
+}
+
+.profilePic {
+  display: inline-block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(73, 138, 210, 1) 50%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  right: 50px;
+  top: 10%;
+}
+
+.landingPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.leftCard {
+  background-color: white;
+  border: 1px solid gray;
+  box-shadow: 2px 2px 2px lightgray;
+  border-radius: 20px;
+  width: 65%;
+  height: auto;
+  margin: 60px 50px 0px auto;
+  text-align: left;
+}
+
+.rightCard {
+  background-color: white;
+  border: 1px solid gray;
+  box-shadow: 2px 2px 2px lightgray;
+  border-radius: 20px;
+  width: 65%;
+  height: auto;
+  margin: 60px auto 0px 50px;
+  text-align: left;
+}
+
+.leftCard h1 {
+  margin-top: 50px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.rightCard h1 {
+  margin-top: 50px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.cardContent {
+  width: 75%;
+  margin: auto;
+  line-height: 40px;
+  font-size: 18px;
+}
+
+.cardImage {
+  display: block;
+  margin: auto;
+}
+
+.guidedFlowBtn {
+  display: block;
+  background-color: #498ad2;
+  color: white;
+  font-size: 20px;
+  margin: 25px auto;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  padding: 20px 50px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  transition: background-color 0.15s linear;
+}
+
+.guidedFlowBtn:hover {
+  background-color: #3b6ea9;
+}
+
+@media only screen and (max-width: 1400px) {
+  .welcome {
+    display: none;
+    visibility: hidden;
+  }
+}
