@@ -4,55 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CustomEats Sandwich Maker</title>
-    <link rel="stylesheet" href="./styles/style.css">
-    <script src="https://kit.fontawesome.com/156fc37316.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/login.css">
+    <title>Login</title>
 </head>
 <body>
-    <nav class="navBar">
-        <div class="logoContainer">
-            <a href="./index.html"><img class ="logo" src="./assets/CustomEats.svg" alt="CustomEats Logo"></a>
-        </div>
-        <div class="linksContainer">
-            <div class="links">
-                <a class="navButton" href="./index.html">Home</a>
-                <a class="navButton" href="./orders.html">Orders</a>
-                <a class="navButton" href="./about.html">About</a>
+    <div class="loginSection">
+        <div class="loginContent">
+            <h1>Login</h1>
+            <p>Enter your credentials to access your account.</p>
+            <hr></hr>
+            <div class="loginForm">
+                <form action="submit" class="login">
+                    <div>
+                        <label style="display:block;" for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div>
+                        <label style="display:block; margin-top: 50px;" for="password">Password<span class="forgotPassword"><a href="forgot.html">Forgot Password?</a></span></label>
+                        <input type="text" id="password" name="password" required>
+                    </div>
+                    <button class="loginBtn">Login</button>
+                </form>
             </div>
         </div>
-        <div class="profileContainer">
-            <div class="welcome"><span>Welcome, Thomas!</span></div>
-            <div class="profilePic"></div>
-        </div>
-    </nav>
-    <div class="landingPage">
-        <div class="leftCard">
-            <h1>One-Time Order</h1>
-            <div class="cardContent">
-                <p>Recommended if:</p>
-                <ul>
-                    <li>This is your first time ordering from CustomEats</li>
-                    <li>You want to order items in bulk for a gathering or party</li>
-                    <li>You want to test a new sandwich idea</li>
-                    <li>You want to purchase a gift for someone</li>
-                </ul>
-                <img class="cardImage" src="./assets/sandwichOneTime.svg" alt="sandWichOneTime">
-            </div>
-            <button class="guidedFlowBtn">Start One-Time Order</button>
-
-        </div>
-        <div class="rightCard">
-            <h1>Recurring Order</h1>
-            <div class="cardContent">
-                <p>Recommended if:</p>
-                <ul>
-                    <li>You've ordered one of our products before and want to set up regular deliveries</li>
-                    <li>You want to meal prep</li>
-                    <li>You own a restaurant and want to streamline your sandwich sales</li>
-                </ul>
-                <img class="cardImage" src="./assets/recurring.svg" alt="sandWichOneTime">
-            </div>
-            <button class="guidedFlowBtn">Start Recurring Order</button>
+        
+    </div>
+    <div class="marketingSection">
+        <img class="logo" src="./assets/CustomEatsWhiteText.svg" alt="CustomEatsWhiteText">
+        <div class="marketingText">
+            <h1>Build your dream sandwich!</h1>
+            <p>At CustomEats, we are dedicated to making your sandwich dreams come true. Sign in and step through our guided experience to craft your masterpiece!</p>
+            <h3>Crafted with <span><img class='heart' src="./assets/heart.svg" alt="heart"></span></h3>
         </div>
     </div>
 </body>

@@ -14,7 +14,82 @@ body {
   height: 100vh;
   border: 1px solid #707070;
   background-color: white;
-  text-align: center;
+  text-align: left;
+}
+
+.loginContent {
+  width: 75%;
+  margin: 100px auto;
+}
+
+.loginContent > h1 {
+  margin-bottom: 5px;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.loginContent > p {
+  padding: 0;
+  font-size: 24px;
+  color: rgb(88, 88, 88);
+  margin: 0 auto 25px auto;
+}
+
+.loginForm {
+  margin-top: 65px;
+  font-size: 20px;
+}
+
+.loginForm input {
+  display: block;
+  margin: 10px auto;
+  width: 95%;
+  height: 50px;
+  font-size: 18px;
+  border: 1px solid #a9a9a9;
+  border-radius: 10px;
+  box-shadow: 0px 1px 3px #7f7f7f;
+}
+
+.loginForm input:focus {
+  outline: none;
+}
+
+.forgotPassword {
+  color: #498ad2;
+  float: right;
+  cursor: pointer;
+}
+
+.forgotPassword a {
+  text-decoration: none;
+}
+
+span {
+  display: inline-block;
+}
+
+.loginBtn {
+  width: 95%;
+  height: 70px;
+  display: block;
+  margin: 100px auto;
+  background-color: #498ad2;
+  color: white;
+  font-size: 24px;
+  border: 1px solid #707070;
+  border-radius: 18px;
+  transition: background-color 0.15s linear;
+  transition: opacity 0.2s linear;
+  cursor: pointer;
+}
+
+.loginBtn:hover {
+  background-color: #4d91e0;
+}
+
+.loginBtn:active {
+  opacity: 0.5;
 }
 
 .marketingSection {
