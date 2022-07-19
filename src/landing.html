@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CustomEats Sandwich Maker</title>
     <link rel="stylesheet" href="./styles/style.css">
-    <script src="https://kit.fontawesome.com/156fc37316.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="navBar">
@@ -21,8 +20,13 @@
             </div>
         </div>
         <div class="profileContainer">
-            <div class="welcome"><span>Welcome, Thomas!</span></div>
-            <div class="profilePic"></div>
+            <div class="dropdown">
+                <span class="myAccount"><a href="account.html">My Account</a></span>
+                <div class="dropdown-content">
+                    <button class="logoutBtn">Logout</button>
+                </div>
+            </div>
+            
         </div>
     </nav>
     <div class="landingPage">
@@ -55,6 +59,6 @@
             <button class="guidedFlowBtn">Start Recurring Order</button>
         </div>
     </div>
-    <div><button class="logoutBtn">Logout</button></div>
+    <div><button class="ctaBtn">Need Help? Contact Us</button></div>
 </body>
 </html>

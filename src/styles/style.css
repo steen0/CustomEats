@@ -2,16 +2,14 @@
   --navHeight: 64px;
 }
 
-html {
-  font-family: Lato;
-}
-
 body {
   height: 100vh;
   padding-top: var(--navHeight);
   background-color: #f2f2f2;
+  font-family: Lato;
 }
 
+/* NAVBAR CSS */
 .navBar {
   display: flex;
   flex-direction: row;
@@ -50,7 +48,7 @@ body {
 
 .links {
   height: 100%;
-  padding-left: 125px;
+  padding-left: 90px;
   width: auto;
   display: flex;
   flex-direction: row;
@@ -65,7 +63,7 @@ body {
   transition: background-color 0.15s linear;
   font-family: Lato light;
   text-align: center;
-  line-height: 60px;
+  line-height: 64px;
   color: black;
   font-size: 20px;
   text-decoration: none;
@@ -78,34 +76,58 @@ body {
 
 .profileContainer {
   flex: 0.75;
-  position: relative;
+  text-align: center;
 }
 
-.welcome {
-  display: inline-block;
-  position: absolute;
-  font-family: Lato light;
-  font-style: italic;
+.myAccount {
+  width: auto;
+  height: 40px;
   font-size: 18px;
-  padding-left: 50px;
-  top: 35%;
+  margin-left: 20px;
+  border: 1px solid #498ad2;
+  border-radius: 19px;
+  padding: 10px 20px;
+  background-color: white;
+  line-height: 64px;
+  cursor: pointer;
 }
 
-.profilePic {
-  display: inline-block;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  background: linear-gradient(
-    45deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(73, 138, 210, 1) 50%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  right: 50px;
-  top: 10%;
+.myAccount a {
+  color: #498ad2;
+  text-decoration: none;
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 5px;
+  text-align: center;
+  min-width: 75px;
+}
+
+.logoutBtn {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* LANDING PAGE CSS */
 
 .landingPage {
   display: grid;
@@ -177,19 +199,22 @@ body {
   background-color: #3b6ea9;
 }
 
-.logoutBtn {
+/* GLOBAL CTA BUTTON CSS */
+.ctaBtn {
   position: fixed;
   right: 40px;
   bottom: 30px;
   cursor: pointer;
   background-color: #e79cc0;
-  width: 200px;
+  width: 250px;
   height: 40px;
   color: black;
   border: 1px solid #707070;
   border-radius: 19px;
   font-size: 18px;
 }
+
+/* ABOUT PAGE CSS */
 
 .aboutSection {
   background-color: white;
@@ -201,6 +226,17 @@ body {
   margin: 60px auto 0px auto;
   text-align: left;
 }
+
+.aboutSection > h1,
+.aboutSection > p {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-weight: 500;
+}
+
+/* ORDER PAGE CSS */
 
 .orderSection {
   background-color: white;
@@ -282,18 +318,31 @@ td {
   font-size: 14px;
 }
 
-.aboutSection > h1,
-.aboutSection > p {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 50px;
-  margin-right: 50px;
-  font-weight: 500;
+.center {
+  text-align: center;
 }
 
-@media only screen and (max-width: 1400px) {
-  .welcome {
-    display: none;
-    visibility: hidden;
-  }
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: white;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: #498ad2;
+  color: white;
+  border: 1px solid #498ad2;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
 }
