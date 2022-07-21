@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/login.css">
     <title>Login</title>
+    <script src="./js/init.js"></script>
 </head>
 <body>
     <div class="loginSection">
@@ -14,14 +15,18 @@
             <p>Enter your credentials to access your account.</p>
             <hr></hr>
             <div class="loginForm">
-                <form action="submit" class="login">
+                <form novalidate action="POST" class="login">
                     <div>
                         <label style="display:block;" for="username">Username</label>
-                        <input type="text" id="username" name="username" required>
+                        <span class="errorMessage"></span>
+                        <input type="text" id="username" name="username">
+                        
                     </div>
                     <div>
-                        <label style="display:block; margin-top: 50px;" for="password">Password<span class="forgotPassword"><a href="forgot.html">Forgot Password?</a></span></label>
-                        <input type="password" id="password" name="password" required>
+                        <label style="display:block; margin-top: 50px;" for="password">Password <span class="forgotPassword"><a href="forgot.html">Forgot Password?</a></span></label>
+                        <span class="errorMessage"></span>
+                        <input type="password" id="password" name="password">
+                        
                     </div>
                     <button class="loginBtn">Login</button>
                 </form>
@@ -37,5 +42,7 @@
             <h3>Crafted with <span><img class='heart' src="./assets/heart.svg" alt="heart"></span></h3>
         </div>
     </div>
+    <script src="./js/login.js"></script>
+    
 </body>
 </html>

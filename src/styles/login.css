@@ -57,6 +57,16 @@ body {
   outline: none;
 }
 
+.errorMessage {
+  display: none;
+  color: red;
+  font-size: 18px;
+}
+
+.active {
+  display: inline-block;
+}
+
 .forgotPassword {
   color: #498ad2;
   float: right;

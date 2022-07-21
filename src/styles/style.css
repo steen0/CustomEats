@@ -247,6 +247,7 @@ body {
   height: 70vh;
   margin: 60px auto 0px auto;
   text-align: left;
+  padding-bottom: 50px;
 }
 
 .orderHeader > h1 {
