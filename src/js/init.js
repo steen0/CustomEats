@@ -1,10 +1,10 @@
 const usersObject = [
   {
-    username: 'tsteen0731',
+    username: 'user1',
     password: 'baseball',
   },
   {
-    username: 'billybeans',
+    username: 'user2',
     password: 'football',
   },
   {
@@ -13,25 +13,9 @@ const usersObject = [
   },
 ];
 
-const ordersObject = [
-  {
-    id: '000001',
-    type: 'Recurring Monthly',
-    quantity: 10,
-    amountUSD: '$100.00',
-    createdDate: '07/18/2022',
-  },
-  {},
-];
-
 // Create users object array if does not exist
 !localStorage.getItem('users')
   ? localStorage.setItem('users', JSON.stringify(usersObject))
-  : null;
-
-// Create orders object array if does not exist
-!localStorage.getItem('orders')
-  ? localStorage.setItem('orders', JSON.stringify(ordersObject))
   : null;
 
 const auth = new Auth();
