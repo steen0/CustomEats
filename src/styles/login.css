@@ -67,16 +67,6 @@ body {
   display: inline-block;
 }
 
-.forgotPassword {
-  color: #498ad2;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.forgotPassword a {
-  text-decoration: none;
-}
-
 span {
   display: inline-block;
 }
