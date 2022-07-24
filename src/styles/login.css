@@ -69,7 +69,7 @@ body {
 
 .forgotPassword {
   color: #498ad2;
-  float: right;
+  display: inline-block;
   cursor: pointer;
 }
 

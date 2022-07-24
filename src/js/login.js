@@ -22,7 +22,7 @@ class Login {
         }
       });
 
-      if (error == false) {
+      if (error == false && this.checkIfUserExists()) {
         // && this.checkIfUserExists()
         localStorage.setItem('auth', true);
         window.location.href = 'landing.html';
@@ -33,7 +33,7 @@ class Login {
   validateField(field) {
     const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
 
-    // check if no spaces for field, else check specific criteria per field
+    // check if field is blank, else check specific criteria based on field name
     if (field.value.trim() === '') {
       this.setStatus(
         field,
@@ -81,6 +81,8 @@ class Login {
     errorMessageElement.innerText = errorMessage;
     if (status === 'error') {
       errorMessageElement.classList.add('active');
+    } else if (status === 'doesNotExist') {
+      alert(errorMessage);
     } else {
       errorMessageElement.classList.remove('active');
     }
@@ -90,14 +92,29 @@ class Login {
     const username = document.getElementById('username');
     const password = document.getElementById('password');
     const users = JSON.parse(localStorage.getItem('users'));
-    users.filter(
-      (user) =>
-        user.username === username.value && user.password === password.value
-    ).length === 0;
+    if (
+      users.filter(
+        (user) =>
+          user.username === username.value && user.password === password.value
+      ).length === 0
+    ) {
+      this.setStatus(
+        username,
+        'User does not exist. Please try again or create an account.',
+        'doesNotExist'
+      );
+      return false;
+    } else {
+      return true;
+    }
   }
 }
-// initialize login
-const loginForm = document.querySelector('.login');
-if (loginForm) {
-  const loginValidator = new Login(loginForm, 'username', 'password'); // additional fields can be added here
+
+if (localStorage.getItem('auth') === 'true') {
+  window.location.replace('/landing.html');
+} else {
+  const loginForm = document.querySelector('.login');
+  loginForm
+    ? (loginValidator = new Login(loginForm, 'username', 'password'))
+    : null; // additional fields can be added here
 }
