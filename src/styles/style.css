@@ -81,13 +81,9 @@ body {
 
 .myAccount {
   width: auto;
-  height: 40px;
+  height: auto;
   font-size: 18px;
-  margin-left: 20px;
-  border: 1px solid #498ad2;
   border-radius: 19px;
-  padding: 10px 20px;
-  background-color: white;
   line-height: 64px;
   cursor: pointer;
 }
@@ -233,21 +229,22 @@ body {
   vertical-align: middle;
   margin-left: 50px;
   margin-right: 50px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* ORDER PAGE CSS */
 
 .orderSection {
+  position: relative;
   background-color: white;
   border: 1px solid gray;
   box-shadow: 2px 2px 2px lightgray;
   border-radius: 20px;
   width: 80%;
-  height: 70vh;
+  height: auto;
   margin: 60px auto 0px auto;
   text-align: left;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 .orderHeader > h1 {
@@ -258,9 +255,9 @@ body {
 }
 
 .orderFilterBtn {
-  float: right;
-  margin-top: 30px;
-  margin-right: 40px;
+  position: absolute;
+  top: 30px;
+  right: 40px;
   width: 100px;
   height: 40px;
   color: black;
@@ -271,7 +268,7 @@ body {
   cursor: pointer;
 }
 
-table {
+.ordersTable {
   display: grid;
   padding-left: 100px;
   padding-right: 100px;
@@ -284,6 +281,39 @@ table {
     minmax(150px, 1.5fr)
     minmax(150px, 1.5fr)
     minmax(100px, 1.5fr);
+}
+
+.noOrders {
+  font-style: italic;
+  color: gray;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 50px;
+  display: none;
+}
+
+.createOrderBtn {
+  position: absolute;
+  width: 150px;
+  height: 40px;
+  background-color: #498ad2;
+  color: white;
+  font-size: 18px;
+  border: 1px solid #707070;
+  border-radius: 18px;
+  transition: background-color 0.15s linear;
+  transition: opacity 0.2s linear;
+  cursor: pointer;
+  right: 40px;
+  bottom: 30px;
+}
+
+.createOrderBtn:hover {
+  background-color: #4d91e0;
+}
+
+.createOrderBtn:active {
+  opacity: 0.5;
 }
 
 thead,

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <script defer src="./js/auth.js"></script>
     <script defer src='./js/init.js'></script>
+
     <title>My Orders</title>
 </head>
 <body>
@@ -35,7 +36,8 @@
             <h1>Orders</h1>
             <button class="orderFilterBtn">Sort By</button>
         </div>
-        <table>
+        <h1 class="noOrders">There are currently no orders to display.</h1>
+        <table class="ordersTable">
             <thead>
                 <th>Order ID</th>
                 <th>Order Type</th>
@@ -44,121 +46,23 @@
                 <th>Created Date</th>
                 <th>Order Details</th>
             </thead>
-            <tbody>
-                <tr>
-                    <td>000001</td>
-                    <td>Recurring</td>
-                    <td>100</td>
-                    <td>$500.00</td>
-                    <td>07/18/2022</td>
-                    <td><button class="detailsBtn">View Details</button></td>
-                </tr>
-                <tr>
-                    <td>000001</td>
-                    <td>Recurring</td>
-                    <td>100</td>
-                    <td>$500.00</td>
-                    <td>07/18/2022</td>
-                    <td><button class="detailsBtn">View Details</button></td>
-                </tr>
-                <tr>
-                    <td>000001</td>
-                    <td>Recurring</td>
-                    <td>100</td>
-                    <td>$500.00</td>
-                    <td>07/18/2022</td>
-                    <td><button class="detailsBtn">View Details</button></td>
-                </tr>
-                <tr>
-                    <td>000001</td>
-                    <td>Recurring</td>
-                    <td>100</td>
-                    <td>$500.00</td>
-                    <td>07/18/2022</td>
-                    <td><button class="detailsBtn">View Details</button></td>
-                </tr>
-                <tr>
-                    <td>000001</td>
-                    <td>Recurring</td>
-                    <td>100</td>
-                    <td>$500.00</td>
-                    <td>07/18/2022</td>
-                    <td><button class="detailsBtn">View Details</button></td>
-                </tr>
-                <tr>
-                    <td>000001</td>
-                    <td>Recurring</td>
-                    <td>100</td>
-                    <td>$500.00</td>
-                    <td>07/18/2022</td>
-                    <td><button class="detailsBtn">View Details</button></td>
-                </tr>
-                <tr>
-                    <td>000001</td>
-                    <td>Recurring</td>
-                    <td>100</td>
-                    <td>$500.00</td>
-                    <td>07/18/2022</td>
-                    <td><button class="detailsBtn">View Details</button></td>
-                </tr>
-                <tr>
-                    <td>000001</td>
-                    <td>Recurring</td>
-                    <td>100</td>
-                    <td>$500.00</td>
-                    <td>07/18/2022</td>
-                    <td><button class="detailsBtn">View Details</button></td>
-                </tr>
-                <tr>
-                    <td>000001</td>
-                    <td>Recurring</td>
-                    <td>100</td>
-                    <td>$500.00</td>
-                    <td>07/18/2022</td>
-                    <td><button class="detailsBtn">View Details</button></td>
-                </tr>
-                <tr>
-                    <td>000001</td>
-                    <td>Recurring</td>
-                    <td>100</td>
-                    <td>$500.00</td>
-                    <td>07/18/2022</td>
-                    <td><button class="detailsBtn">View Details</button></td>
-                </tr>
-                <tr>
-                    <td>000001</td>
-                    <td>Recurring</td>
-                    <td>100</td>
-                    <td>$500.00</td>
-                    <td>07/18/2022</td>
-                    <td><button class="detailsBtn">View Details</button></td>
-                </tr>
-                <tr>
-                    <td>000001</td>
-                    <td>Recurring</td>
-                    <td>100</td>
-                    <td>$500.00</td>
-                    <td>07/18/2022</td>
-                    <td><button class="detailsBtn">View Details</button></td>
-                </tr>
-                
-                
-                
-            </tbody>
+            <tbody id="ordersTableBody"></tbody>
         </table>
-
+    <button class="createOrderBtn">Create Order</button>
     </div>
     <div class="center">
         <div class="pagination">
         <a href="#">&laquo;</a>
-        <a href="#" class="active">1</a>
+        <a href="#">1</a>
         <a href="#">2</a>
         <a href="#">3</a>
         <a href="#">4</a>
         <a href="#">5</a>
         <a href="#">6</a>
-        <a href="#">&raquo;</a>
+        <a href="#">&raquo;</a> 
         </div>
-    <div><button class="ctaBtn">Need Help? Contact Us</button></div>
+    </div>
+    <button class="ctaBtn">Need Help? Contact Us</button>
+    <script src="./js/orders.js"></script>
 </body>
 </html>

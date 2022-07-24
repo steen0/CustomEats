@@ -6,10 +6,10 @@ class Login {
     this.fields = fields;
 
     // validate fieldsn and either display errors or allow redirect
-    this.validateSubmission();
+    this.validateLogin();
   }
 
-  validateSubmission() {
+  validateLogin() {
     this.form.addEventListener('submit', (e) => {
       e.preventDefault(); // prevent default submit\
 
