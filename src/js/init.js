@@ -56,6 +56,20 @@ const ordersObject = [
     totalAmount: '$180.00',
     createdDate: '04/09/2021',
   },
+  {
+    id: '000007',
+    type: 'One-Time',
+    quantity: 1,
+    totalAmount: '$10.00',
+    createdDate: '05/19/2021',
+  },
+  {
+    id: '000008',
+    type: 'One-Time',
+    quantity: 25,
+    totalAmount: '$180.00',
+    createdDate: '04/09/2021',
+  },
 ];
 
 // Create users object array if does not exist
