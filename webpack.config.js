@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './src/js/main.js',
+  entry: './src/js/auth.js',
   mode: 'development',
   output: {
     path: `${__dirname}/dist`,
