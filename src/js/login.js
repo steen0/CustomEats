@@ -186,6 +186,8 @@ class Login {
         'User does not exist. Please try again or create an account.',
         'doesNotExist'
       );
+      username.value = '';
+      password.value = '';
       return false;
     } else {
       return true;
