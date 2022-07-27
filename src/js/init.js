@@ -1,5 +1,3 @@
-import Auth from './auth';
-
 const usersObject = [
   {
     username: 'user1',

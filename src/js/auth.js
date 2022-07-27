@@ -18,5 +18,3 @@ class Auth {
     window.location.replace('/');
   }
 }
-
-export default Auth;
